@@ -6,8 +6,14 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifdef CORDOVA_FRAMEWORK
+    #import <Cordova/CDVViewController.h>
+#else
+    #import "CDVViewController.h"
+#endif
 
-@interface ZKViewController : UIViewController
+@interface ZKViewController : CDVViewController
+
+@property (nonatomic, readwrite, copy) NSString* startURL;
 
 @end

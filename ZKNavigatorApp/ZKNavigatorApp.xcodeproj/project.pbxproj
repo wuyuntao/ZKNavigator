@@ -39,6 +39,10 @@
 		CEF664CB15526CBE0046963C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF664CA15526CBE0046963C /* MainViewController.xib */; };
 		CEF664CF15526CBE0046963C /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = CEF664CE15526CBE0046963C /* verify.sh */; };
 		CEF664D615526E440046963C /* www in Resources */ = {isa = PBXBuildFile; fileRef = CEF664D515526E440046963C /* www */; };
+		CEF664DD15526ED40046963C /* ZKNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF664DA15526ED40046963C /* ZKNavigator.m */; };
+		CEF664DE15526ED40046963C /* ZKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF664DC15526ED40046963C /* ZKViewController.m */; };
+		CEF664F0155274150046963C /* SOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF664EF155274150046963C /* SOCKit.m */; };
+		CEF664F415528B120046963C /* libGRMustache3-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF664F315528B120046963C /* libGRMustache3-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,14 @@
 		CEF664CD15526CBE0046963C /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		CEF664CE15526CBE0046963C /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
 		CEF664D515526E440046963C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
+		CEF664D815526ED40046963C /* ZKNavigator-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZKNavigator-Prefix.pch"; sourceTree = "<group>"; };
+		CEF664D915526ED40046963C /* ZKNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKNavigator.h; sourceTree = "<group>"; };
+		CEF664DA15526ED40046963C /* ZKNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKNavigator.m; sourceTree = "<group>"; };
+		CEF664DB15526ED40046963C /* ZKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKViewController.h; sourceTree = "<group>"; };
+		CEF664DC15526ED40046963C /* ZKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKViewController.m; sourceTree = "<group>"; };
+		CEF664EE155274150046963C /* SOCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCKit.h; sourceTree = "<group>"; };
+		CEF664EF155274150046963C /* SOCKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCKit.m; sourceTree = "<group>"; };
+		CEF664F315528B120046963C /* libGRMustache3-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGRMustache3-iOS.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 				CEF6649415526CBE0046963C /* MobileCoreServices.framework in Frameworks */,
 				CEF6649615526CBE0046963C /* CoreMedia.framework in Frameworks */,
 				CEF664A115526CBE0046963C /* Cordova.framework in Frameworks */,
+				CEF664F415528B120046963C /* libGRMustache3-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +147,7 @@
 		CEF6647C15526CBE0046963C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEF664F315528B120046963C /* libGRMustache3-iOS.a */,
 				CEF664A015526CBE0046963C /* Cordova.framework */,
 				CEF6647D15526CBE0046963C /* Foundation.framework */,
 				CEF6647F15526CBE0046963C /* UIKit.framework */,
@@ -246,6 +260,7 @@
 		CEF664C315526CBE0046963C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEF664D715526ED40046963C /* ZKNavigator */,
 				CEF664C415526CBE0046963C /* AppDelegate.h */,
 				CEF664C515526CBE0046963C /* AppDelegate.m */,
 				CEF664C715526CBE0046963C /* MainViewController.h */,
@@ -260,6 +275,29 @@
 				CEF664CD15526CBE0046963C /* README */,
 			);
 			name = Plugins;
+			sourceTree = "<group>";
+		};
+		CEF664D715526ED40046963C /* ZKNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				CEF664EC155273FC0046963C /* SOCKit */,
+				CEF664D815526ED40046963C /* ZKNavigator-Prefix.pch */,
+				CEF664D915526ED40046963C /* ZKNavigator.h */,
+				CEF664DA15526ED40046963C /* ZKNavigator.m */,
+				CEF664DB15526ED40046963C /* ZKViewController.h */,
+				CEF664DC15526ED40046963C /* ZKViewController.m */,
+			);
+			name = ZKNavigator;
+			path = ../ZKNavigator/ZKNavigator;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEF664EC155273FC0046963C /* SOCKit */ = {
+			isa = PBXGroup;
+			children = (
+				CEF664EE155274150046963C /* SOCKit.h */,
+				CEF664EF155274150046963C /* SOCKit.m */,
+			);
+			path = SOCKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +400,9 @@
 				CEF6649E15526CBE0046963C /* main.m in Sources */,
 				CEF664C615526CBE0046963C /* AppDelegate.m in Sources */,
 				CEF664C915526CBE0046963C /* MainViewController.m in Sources */,
+				CEF664DD15526ED40046963C /* ZKNavigator.m in Sources */,
+				CEF664DE15526ED40046963C /* ZKViewController.m in Sources */,
+				CEF664F0155274150046963C /* SOCKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +521,11 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "ZKNavigatorApp/ZKNavigatorApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../tmp/GRMustache/lib\"",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -510,6 +556,11 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "ZKNavigatorApp/ZKNavigatorApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../tmp/GRMustache/lib\"",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -546,6 +597,7 @@
 				CEF664D415526CBE0046963C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

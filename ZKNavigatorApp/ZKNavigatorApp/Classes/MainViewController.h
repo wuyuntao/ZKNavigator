@@ -25,12 +25,16 @@
 //  Copyright __MyCompanyName__ 2012年. All rights reserved.
 //
 
-#ifdef CORDOVA_FRAMEWORK
-    #import <Cordova/CDVViewController.h>
-#else
-    #import "CDVViewController.h"
-#endif
+// TODO Some doc is neccessary
 
-@interface MainViewController : CDVViewController
+// #ifdef CORDOVA_FRAMEWORK
+//     #import <Cordova/CDVViewController.h>
+// #else
+//     #import "CDVViewController.h"
+// #endif
+
+#import "ZKViewController.h"
+
+@interface MainViewController : ZKViewController
 
 @end

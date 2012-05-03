@@ -27,12 +27,13 @@
 
 #import <UIKit/UIKit.h>
 
-#ifdef CORDOVA_FRAMEWORK
-    #import <Cordova/CDVViewController.h>
-#else
-    #import "CDVViewController.h"
-#endif
+// #ifdef CORDOVA_FRAMEWORK
+//     #import <Cordova/CDVViewController.h>
+// #else
+//     #import "CDVViewController.h"
+// #endif
 
+#import "ZKViewController.h"
 
 @interface AppDelegate : NSObject < UIApplicationDelegate > {
 
@@ -44,7 +45,7 @@
 // http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 
 @property (nonatomic, retain) IBOutlet UIWindow* window;
-@property (nonatomic, retain) IBOutlet CDVViewController* viewController;
+@property (nonatomic, retain) IBOutlet ZKViewController* viewController;
 
 @end
 
