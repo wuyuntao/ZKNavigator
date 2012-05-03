@@ -15,6 +15,8 @@
 		CEA0FE4615524B26002F8DA7 /* libZKNavigator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA0FE2E15524B26002F8DA7 /* libZKNavigator.a */; };
 		CEA0FE4C15524B26002F8DA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA0FE4A15524B26002F8DA7 /* InfoPlist.strings */; };
 		CEA0FE4F15524B26002F8DA7 /* ZKNavigatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE4E15524B26002F8DA7 /* ZKNavigatorTests.m */; };
+		CEA0FE5F15525708002F8DA7 /* ZKViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA0FE5D15525708002F8DA7 /* ZKViewController.h */; };
+		CEA0FE6015525708002F8DA7 /* ZKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE5E15525708002F8DA7 /* ZKViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		CEA0FE4B15524B26002F8DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CEA0FE4D15524B26002F8DA7 /* ZKNavigatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKNavigatorTests.h; sourceTree = "<group>"; };
 		CEA0FE4E15524B26002F8DA7 /* ZKNavigatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKNavigatorTests.m; sourceTree = "<group>"; };
+		CEA0FE5D15525708002F8DA7 /* ZKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKViewController.h; sourceTree = "<group>"; };
+		CEA0FE5E15525708002F8DA7 /* ZKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		CEA0FE3315524B26002F8DA7 /* ZKNavigator */ = {
 			isa = PBXGroup;
 			children = (
+				CEA0FE5D15525708002F8DA7 /* ZKViewController.h */,
+				CEA0FE5E15525708002F8DA7 /* ZKViewController.m */,
 				CEA0FE3615524B26002F8DA7 /* ZKNavigator.h */,
 				CEA0FE3715524B26002F8DA7 /* ZKNavigator.m */,
 				CEA0FE3415524B26002F8DA7 /* Supporting Files */,
@@ -138,6 +144,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA0FE5F15525708002F8DA7 /* ZKViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA0FE3815524B26002F8DA7 /* ZKNavigator.m in Sources */,
+				CEA0FE6015525708002F8DA7 /* ZKViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +393,7 @@
 				CEA0FE5415524B26002F8DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEA0FE5515524B26002F8DA7 /* Build configuration list for PBXNativeTarget "ZKNavigatorTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +402,7 @@
 				CEA0FE5715524B26002F8DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
