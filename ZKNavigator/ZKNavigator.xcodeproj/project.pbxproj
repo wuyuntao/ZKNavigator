@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEA0FE3215524B26002F8DA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA0FE3115524B26002F8DA7 /* Foundation.framework */; };
+		CEA0FE3815524B26002F8DA7 /* ZKNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE3715524B26002F8DA7 /* ZKNavigator.m */; };
+		CEA0FE4015524B26002F8DA7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA0FE3F15524B26002F8DA7 /* SenTestingKit.framework */; };
+		CEA0FE4215524B26002F8DA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA0FE4115524B26002F8DA7 /* UIKit.framework */; };
+		CEA0FE4315524B26002F8DA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA0FE3115524B26002F8DA7 /* Foundation.framework */; };
+		CEA0FE4615524B26002F8DA7 /* libZKNavigator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA0FE2E15524B26002F8DA7 /* libZKNavigator.a */; };
+		CEA0FE4C15524B26002F8DA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA0FE4A15524B26002F8DA7 /* InfoPlist.strings */; };
+		CEA0FE4F15524B26002F8DA7 /* ZKNavigatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE4E15524B26002F8DA7 /* ZKNavigatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEA0FE4415524B26002F8DA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA0FE2515524B26002F8DA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEA0FE2D15524B26002F8DA7;
+			remoteInfo = ZKNavigator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEA0FE2E15524B26002F8DA7 /* libZKNavigator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZKNavigator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA0FE3115524B26002F8DA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CEA0FE3515524B26002F8DA7 /* ZKNavigator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZKNavigator-Prefix.pch"; sourceTree = "<group>"; };
+		CEA0FE3615524B26002F8DA7 /* ZKNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKNavigator.h; sourceTree = "<group>"; };
+		CEA0FE3715524B26002F8DA7 /* ZKNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKNavigator.m; sourceTree = "<group>"; };
+		CEA0FE3E15524B26002F8DA7 /* ZKNavigatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZKNavigatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA0FE3F15524B26002F8DA7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CEA0FE4115524B26002F8DA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CEA0FE4915524B26002F8DA7 /* ZKNavigatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZKNavigatorTests-Info.plist"; sourceTree = "<group>"; };
+		CEA0FE4B15524B26002F8DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CEA0FE4D15524B26002F8DA7 /* ZKNavigatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKNavigatorTests.h; sourceTree = "<group>"; };
+		CEA0FE4E15524B26002F8DA7 /* ZKNavigatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKNavigatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEA0FE2B15524B26002F8DA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA0FE3215524B26002F8DA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA0FE3A15524B26002F8DA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA0FE4015524B26002F8DA7 /* SenTestingKit.framework in Frameworks */,
+				CEA0FE4215524B26002F8DA7 /* UIKit.framework in Frameworks */,
+				CEA0FE4315524B26002F8DA7 /* Foundation.framework in Frameworks */,
+				CEA0FE4615524B26002F8DA7 /* libZKNavigator.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEA0FE2315524B26002F8DA7 = {
+			isa = PBXGroup;
+			children = (
+				CEA0FE3315524B26002F8DA7 /* ZKNavigator */,
+				CEA0FE4715524B26002F8DA7 /* ZKNavigatorTests */,
+				CEA0FE3015524B26002F8DA7 /* Frameworks */,
+				CEA0FE2F15524B26002F8DA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEA0FE2F15524B26002F8DA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0FE2E15524B26002F8DA7 /* libZKNavigator.a */,
+				CEA0FE3E15524B26002F8DA7 /* ZKNavigatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA0FE3015524B26002F8DA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0FE3115524B26002F8DA7 /* Foundation.framework */,
+				CEA0FE3F15524B26002F8DA7 /* SenTestingKit.framework */,
+				CEA0FE4115524B26002F8DA7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEA0FE3315524B26002F8DA7 /* ZKNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0FE3615524B26002F8DA7 /* ZKNavigator.h */,
+				CEA0FE3715524B26002F8DA7 /* ZKNavigator.m */,
+				CEA0FE3415524B26002F8DA7 /* Supporting Files */,
+			);
+			path = ZKNavigator;
+			sourceTree = "<group>";
+		};
+		CEA0FE3415524B26002F8DA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0FE3515524B26002F8DA7 /* ZKNavigator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEA0FE4715524B26002F8DA7 /* ZKNavigatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0FE4D15524B26002F8DA7 /* ZKNavigatorTests.h */,
+				CEA0FE4E15524B26002F8DA7 /* ZKNavigatorTests.m */,
+				CEA0FE4815524B26002F8DA7 /* Supporting Files */,
+			);
+			path = ZKNavigatorTests;
+			sourceTree = "<group>";
+		};
+		CEA0FE4815524B26002F8DA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0FE4915524B26002F8DA7 /* ZKNavigatorTests-Info.plist */,
+				CEA0FE4A15524B26002F8DA7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CEA0FE2C15524B26002F8DA7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CEA0FE2D15524B26002F8DA7 /* ZKNavigator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA0FE5215524B26002F8DA7 /* Build configuration list for PBXNativeTarget "ZKNavigator" */;
+			buildPhases = (
+				CEA0FE2A15524B26002F8DA7 /* Sources */,
+				CEA0FE2B15524B26002F8DA7 /* Frameworks */,
+				CEA0FE2C15524B26002F8DA7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZKNavigator;
+			productName = ZKNavigator;
+			productReference = CEA0FE2E15524B26002F8DA7 /* libZKNavigator.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CEA0FE3D15524B26002F8DA7 /* ZKNavigatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA0FE5515524B26002F8DA7 /* Build configuration list for PBXNativeTarget "ZKNavigatorTests" */;
+			buildPhases = (
+				CEA0FE3915524B26002F8DA7 /* Sources */,
+				CEA0FE3A15524B26002F8DA7 /* Frameworks */,
+				CEA0FE3B15524B26002F8DA7 /* Resources */,
+				CEA0FE3C15524B26002F8DA7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEA0FE4515524B26002F8DA7 /* PBXTargetDependency */,
+			);
+			name = ZKNavigatorTests;
+			productName = ZKNavigatorTests;
+			productReference = CEA0FE3E15524B26002F8DA7 /* ZKNavigatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEA0FE2515524B26002F8DA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CEA0FE2815524B26002F8DA7 /* Build configuration list for PBXProject "ZKNavigator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEA0FE2315524B26002F8DA7;
+			productRefGroup = CEA0FE2F15524B26002F8DA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEA0FE2D15524B26002F8DA7 /* ZKNavigator */,
+				CEA0FE3D15524B26002F8DA7 /* ZKNavigatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEA0FE3B15524B26002F8DA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA0FE4C15524B26002F8DA7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CEA0FE3C15524B26002F8DA7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEA0FE2A15524B26002F8DA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA0FE3815524B26002F8DA7 /* ZKNavigator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA0FE3915524B26002F8DA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA0FE4F15524B26002F8DA7 /* ZKNavigatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEA0FE4515524B26002F8DA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEA0FE2D15524B26002F8DA7 /* ZKNavigator */;
+			targetProxy = CEA0FE4415524B26002F8DA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEA0FE4A15524B26002F8DA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA0FE4B15524B26002F8DA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEA0FE5015524B26002F8DA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEA0FE5115524B26002F8DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEA0FE5315524B26002F8DA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ZKNavigator.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZKNavigator/ZKNavigator-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CEA0FE5415524B26002F8DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ZKNavigator.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZKNavigator/ZKNavigator-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CEA0FE5615524B26002F8DA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZKNavigator/ZKNavigator-Prefix.pch";
+				INFOPLIST_FILE = "ZKNavigatorTests/ZKNavigatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CEA0FE5715524B26002F8DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZKNavigator/ZKNavigator-Prefix.pch";
+				INFOPLIST_FILE = "ZKNavigatorTests/ZKNavigatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEA0FE2815524B26002F8DA7 /* Build configuration list for PBXProject "ZKNavigator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA0FE5015524B26002F8DA7 /* Debug */,
+				CEA0FE5115524B26002F8DA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA0FE5215524B26002F8DA7 /* Build configuration list for PBXNativeTarget "ZKNavigator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA0FE5315524B26002F8DA7 /* Debug */,
+				CEA0FE5415524B26002F8DA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEA0FE5515524B26002F8DA7 /* Build configuration list for PBXNativeTarget "ZKNavigatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA0FE5615524B26002F8DA7 /* Debug */,
+				CEA0FE5715524B26002F8DA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEA0FE2515524B26002F8DA7 /* Project object */;
+}
