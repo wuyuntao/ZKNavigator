@@ -17,6 +17,8 @@
 		CEA0FE4F15524B26002F8DA7 /* ZKNavigatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE4E15524B26002F8DA7 /* ZKNavigatorTests.m */; };
 		CEA0FE5F15525708002F8DA7 /* ZKViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA0FE5D15525708002F8DA7 /* ZKViewController.h */; };
 		CEA0FE6015525708002F8DA7 /* ZKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE5E15525708002F8DA7 /* ZKViewController.m */; };
+		CEC4798D1553C53D0022205C /* SOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC4798B1553C53D0022205C /* SOCKit.h */; };
+		CEC4798E1553C53D0022205C /* SOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC4798C1553C53D0022205C /* SOCKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		CEA0FE4E15524B26002F8DA7 /* ZKNavigatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKNavigatorTests.m; sourceTree = "<group>"; };
 		CEA0FE5D15525708002F8DA7 /* ZKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKViewController.h; sourceTree = "<group>"; };
 		CEA0FE5E15525708002F8DA7 /* ZKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKViewController.m; sourceTree = "<group>"; };
+		CEC4798A1553C53D0022205C /* .SOCKit.h.swp */ = {isa = PBXFileReference; lastKnownFileType = file; path = .SOCKit.h.swp; sourceTree = "<group>"; };
+		CEC4798B1553C53D0022205C /* SOCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCKit.h; sourceTree = "<group>"; };
+		CEC4798C1553C53D0022205C /* SOCKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		CEA0FE3315524B26002F8DA7 /* ZKNavigator */ = {
 			isa = PBXGroup;
 			children = (
+				CEC479891553C53D0022205C /* SOCKit */,
 				CEA0FE5D15525708002F8DA7 /* ZKViewController.h */,
 				CEA0FE5E15525708002F8DA7 /* ZKViewController.m */,
 				CEA0FE3615524B26002F8DA7 /* ZKNavigator.h */,
@@ -137,6 +143,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CEC479891553C53D0022205C /* SOCKit */ = {
+			isa = PBXGroup;
+			children = (
+				CEC4798A1553C53D0022205C /* .SOCKit.h.swp */,
+				CEC4798B1553C53D0022205C /* SOCKit.h */,
+				CEC4798C1553C53D0022205C /* SOCKit.m */,
+			);
+			path = SOCKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -145,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA0FE5F15525708002F8DA7 /* ZKViewController.h in Headers */,
+				CEC4798D1553C53D0022205C /* SOCKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +264,7 @@
 			files = (
 				CEA0FE3815524B26002F8DA7 /* ZKNavigator.m in Sources */,
 				CEA0FE6015525708002F8DA7 /* ZKViewController.m in Sources */,
+				CEC4798E1553C53D0022205C /* SOCKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

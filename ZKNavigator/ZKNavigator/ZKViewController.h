@@ -12,7 +12,13 @@
     #import "CDVViewController.h"
 #endif
 
-@interface ZKViewController : CDVViewController
+#import "ZKNavigator.h"
+
+@interface ZKViewController : CDVViewController {
+    ZKNavigator *navigator;
+}
+
+@property (nonatomic, retain) ZKNavigator* navigator;
 
 @property (nonatomic, readwrite, copy) NSString* startURL;
 

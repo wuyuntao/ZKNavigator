@@ -10,9 +10,24 @@
 
 @implementation ZKViewController
 
+@synthesize navigator;
 @synthesize startURL;
 
-- (BOOL) webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
+- (id)init {
+    self = [super init];
+    if (self) {
+        navigator = [[ZKNavigator alloc] init];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [navigator release];
+    navigator = nil;
+    [super dealloc];
+}
+
+- (BOOL)webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSURL* url = [request URL];
     // NSLog(@"Request URL: %@", [url absoluteString]);

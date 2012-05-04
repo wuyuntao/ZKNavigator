@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZKWebViewController.h"
 
-@interface WebViewController : NSObject
+@interface IndexController : ZKWebViewController
+
+@end
+
+@interface LoginController : ZKWebViewController
+
+@end
+
+@interface UserController : ZKWebViewController
 
 @end

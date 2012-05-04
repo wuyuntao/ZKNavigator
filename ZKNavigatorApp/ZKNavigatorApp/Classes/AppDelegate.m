@@ -27,6 +27,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "WebViewController.h"
 
 #ifdef CORDOVA_FRAMEWORK
     #import <Cordova/CDVPlugin.h>
@@ -84,10 +85,10 @@
     self.viewController.startPage = @"index.html";
 
     self.viewController.startURL = @"/";
-//    ZKNavigator *navigator = self.viewController.navigator;
-//    [navigator match:@"/" withController:[IndexController class]];
-//    [navigator match:@"/login/" withController:[LoginController class]];
-//    [navigator match:@"/users/:id" withController:[UserController class] select:@selector(initWithUserId:)];
+    ZKNavigator *navigator = self.viewController.navigator;
+    [navigator from:@"/" toController:[IndexController class]];
+    [navigator from:@"/login/" toController:[LoginController class]];
+    [navigator from:@"/users/:id" toController:[UserController class] select:@selector(initWithUserId:)];
     
     self.viewController.invokeString = invokeString;
     self.viewController.view.frame = viewBounds;
