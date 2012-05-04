@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEC4797B1553A1680022205C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC4797A1553A1680022205C /* WebViewController.m */; };
+		CEC479821553A1D50022205C /* ZKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC479811553A1D50022205C /* ZKWebViewController.m */; };
+		CEC479851553A1EE0022205C /* ZKURLMap.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC479841553A1EE0022205C /* ZKURLMap.m */; };
 		CEF6647E15526CBE0046963C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF6647D15526CBE0046963C /* Foundation.framework */; };
 		CEF6648015526CBE0046963C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF6647F15526CBE0046963C /* UIKit.framework */; };
 		CEF6648215526CBE0046963C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF6648115526CBE0046963C /* CoreGraphics.framework */; };
@@ -46,6 +49,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEC479791553A1680022205C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ZKNavigatorApp/Classes/WebViewController.h; sourceTree = SOURCE_ROOT; };
+		CEC4797A1553A1680022205C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ZKNavigatorApp/Classes/WebViewController.m; sourceTree = SOURCE_ROOT; };
+		CEC479801553A1D50022205C /* ZKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKWebViewController.h; sourceTree = "<group>"; };
+		CEC479811553A1D50022205C /* ZKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKWebViewController.m; sourceTree = "<group>"; };
+		CEC479831553A1EE0022205C /* ZKURLMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKURLMap.h; sourceTree = "<group>"; };
+		CEC479841553A1EE0022205C /* ZKURLMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKURLMap.m; sourceTree = "<group>"; };
 		CEF6647915526CBE0046963C /* ZKNavigatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKNavigatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF6647D15526CBE0046963C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEF6647F15526CBE0046963C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -265,6 +274,8 @@
 				CEF664C515526CBE0046963C /* AppDelegate.m */,
 				CEF664C715526CBE0046963C /* MainViewController.h */,
 				CEF664C815526CBE0046963C /* MainViewController.m */,
+				CEC479791553A1680022205C /* WebViewController.h */,
+				CEC4797A1553A1680022205C /* WebViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -286,6 +297,10 @@
 				CEF664DA15526ED40046963C /* ZKNavigator.m */,
 				CEF664DB15526ED40046963C /* ZKViewController.h */,
 				CEF664DC15526ED40046963C /* ZKViewController.m */,
+				CEC479801553A1D50022205C /* ZKWebViewController.h */,
+				CEC479811553A1D50022205C /* ZKWebViewController.m */,
+				CEC479831553A1EE0022205C /* ZKURLMap.h */,
+				CEC479841553A1EE0022205C /* ZKURLMap.m */,
 			);
 			name = ZKNavigator;
 			path = ../ZKNavigator/ZKNavigator;
@@ -403,6 +418,9 @@
 				CEF664DD15526ED40046963C /* ZKNavigator.m in Sources */,
 				CEF664DE15526ED40046963C /* ZKViewController.m in Sources */,
 				CEF664F0155274150046963C /* SOCKit.m in Sources */,
+				CEC4797B1553A1680022205C /* WebViewController.m in Sources */,
+				CEC479821553A1D50022205C /* ZKWebViewController.m in Sources */,
+				CEC479851553A1EE0022205C /* ZKURLMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
