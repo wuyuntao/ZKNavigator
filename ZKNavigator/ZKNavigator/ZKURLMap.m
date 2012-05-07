@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         patterns = [[NSMutableArray alloc] init];
-        objects = [[NSMutableArray alloc] init];
+        // objects = [[NSMutableArray alloc] init];
         mappings = [[NSMutableDictionary alloc] init];
     }
     return self;
@@ -24,10 +24,10 @@
 
 - (void)dealloc {
     [patterns release];
-    [objects release];
+    // [objects release];
     [mappings release];
     patterns = nil;
-    objects = nil;
+    // objects = nil;
     mappings = nil;
     [super dealloc];
 }
@@ -44,23 +44,24 @@
     return [NSString stringWithFormat:@"%s_%@", className, (nil != name) ? name : @""];
 }
 
-- (void)addPattern:(SOCPattern*)pattern forObject:(id)object
+- (void)addPattern:(SOCPattern*)pattern forObject:(id)object selector:(SEL)selector
 {
+    pattern.object = object;
+    if (selector != nil) {
+        pattern.selector = selector;
+    }
     [patterns addObject:pattern];
-    [objects addObject:object];
 }
 
-- (int)matchPattern:(NSURL*)URL {
+- (SOCPattern*)matchPattern:(NSURL*)URL {
     NSString* path = [URL path];
-    int index = 0;
 
     for (SOCPattern* pattern in patterns) {
         if ([pattern stringMatches:path]) {
-            return index;
+            return pattern;
         }
-        index++;
     }
-    return -1;
+    return nil;
 }
 
 #pragma mark -
@@ -69,17 +70,23 @@
 - (void)from:(NSString*)URL toObject:(id)object
 {
     SOCPattern *pattern = [SOCPattern patternWithString:URL];
-    [self addPattern:pattern forObject:object];
+    [self addPattern:pattern forObject:object selector:nil];
     // NOTE Is it ok to release pattern here?
-    [pattern release];
+    // [pattern release];
 }
 
 - (void)from:(NSString*)URL toObject:(id)object selector:(SEL)selector
 {
+    SOCPattern *pattern = [SOCPattern patternWithString:URL];
+    [self addPattern:pattern forObject:object selector:selector];
+    // NOTE Is it ok to release pattern here?
+    [pattern release];
 }
 
 - (void)setObject:(id)object forURL:(NSString*)URL
 {
+    // TODO Normalize the URL first
+    [mappings setObject:object forKey:URL];
 }
 
 - (void)removeURL:(NSString*)URL
@@ -106,18 +113,28 @@
     }
 
     NSURL* theURL = [NSURL URLWithString:URL];
-    int index = [self matchPattern:theURL];
-    if (index > 0) {
+    SOCPattern* pattern = [self matchPattern:theURL];
+    if (pattern != nil) {
         if (!object) {
-            object = [self createObject:index fromURL:theURL];
+            object = [self createObject:pattern fromURL:theURL];
         }
-        SOCPattern* pattern = [patterns objectAtIndex:index];
-        if (object) {
-            [self setObject:object forURL:URL];
-        }
+        [self setObject:object forURL:URL];
         return object;
     }
     return nil;
+}
+
+- (id)createObject:(SOCPattern*)pattern fromURL:(NSURL*)URL
+{
+  id value = nil;
+  value = [[pattern object] alloc];
+  if (pattern.selector) {
+      NSLog(@"Not implemented yet");
+  } else {
+      value = [value init];
+  }
+  [value autorelease];
+  return value;
 }
 
 @end

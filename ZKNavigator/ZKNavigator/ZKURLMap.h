@@ -13,7 +13,7 @@
 @interface ZKURLMap : NSObject {
   NSMutableDictionary*    mappings;
   NSMutableArray*         patterns;
-  NSMutableArray*         objects;
+  // NSMutableArray*         objects;
 }
 
 /**
@@ -53,5 +53,7 @@
  * Gets or creates the object with a pattern that matches the URL.
  */
 - (id)objectForURL:(NSString*)URL;
+
+- (id)createObject:(SOCPattern*)pattern fromURL:(NSURL*)URL;
 
 @end

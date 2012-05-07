@@ -17,6 +17,10 @@
 
 @end
 
-@interface UserController : ZKWebViewController
+@interface UserController : ZKWebViewController {
+    NSString* userId;
+}
+
+@property (nonatomic, retain) NSString* userId;
 
 @end

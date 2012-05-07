@@ -8,6 +8,11 @@
 
 #import "ZKURLMap.h"
 #import "ZKNavigator.h"
+#import "ZKViewController.h"
+#import "ZKWebViewController.h"
+
+// @class ZKViewController;
+// @class ZKWebViewController;
 
 @implementation ZKNavigator
 
@@ -34,18 +39,27 @@
 
 - (void)from:(NSString*)URL toController:(id)controller
 {
+    [map from:URL toObject:controller];
 }
 
 - (void)from:(NSString*)URL toController:(id)controller selector:(SEL)selector
 {
+    [map from:URL toObject:controller selector:selector];
 }
 
 - (ZKWebViewController*)controllerForURL:(NSString*)URL
 {
+    return [map objectForURL:URL];
 }
 
-- (ZKWebViewController*)openURL:(NSString*)URL
+- (ZKWebViewController*)openURL:(NSString*)URL withController:(ZKViewController*)viewController
 {
+    ZKWebViewController* controller = [self controllerForURL:URL];
+    controller.viewController = viewController;
+    if (controller != nil) {
+        [controller perform];
+    }
+    return controller;
 }
 
 @end

@@ -10,4 +10,12 @@
 
 @implementation ZKWebViewController
 
+@synthesize viewController;
+@synthesize url;
+
+- (void)perform
+{
+    NSLog(@"Implement this method in subclasses");
+}
+
 @end

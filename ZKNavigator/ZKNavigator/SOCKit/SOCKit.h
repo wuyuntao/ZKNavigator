@@ -100,7 +100,13 @@
   NSString* _patternString;
   NSArray* _tokens;
   NSArray* _parameters;
+
+  id       _object;
+  SEL      _selector;
 }
+
+@property (nonatomic, readwrite) id object;
+@property (nonatomic, readwrite) SEL selector;
 
 /**
  * Initializes a newly allocated pattern object with the given pattern string.
@@ -172,15 +178,15 @@
 #if NS_BLOCKS_AVAILABLE
 /**
  * Returns a string with the parameters of this pattern replaced using Key-Value Coding (KVC)
- * on the receiving object, and the result is (optionally) modified or encoded by the block. 
- * 
+ * on the receiving object, and the result is (optionally) modified or encoded by the block.
+ *
  * For example, consider we have individual object values that need percent escapes added to them,
- * while preserving the slashes, question marks, and ampersands of a typical resource path. 
+ * while preserving the slashes, question marks, and ampersands of a typical resource path.
  * Using blocks, this is very succinct:
  *
  * @code
  * NSDictionary* person = [NSDictionary dictionaryWithObjectsAndKeys:
- *                         @"SECRET|KEY",@"password", 
+ *                         @"SECRET|KEY",@"password",
  *                         @"Joe Bob Briggs", @"name", nil];
  * SOCPattern* soc = [SOCPattern patternWithString:@"/people/:name/:password"];
  * NSString* actualPath = [soc stringFromObject:person withBlock:^(NSString *)propertyValue) {

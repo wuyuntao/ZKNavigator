@@ -8,6 +8,8 @@
 
 #import "ZKViewController.h"
 
+@class ZKWebViewController;
+
 @implementation ZKViewController
 
 @synthesize navigator;
@@ -36,6 +38,7 @@
     // NSLog(@"Request path: %@", [url path]);
     if ([[url scheme] isEqualToString:@"zk"]) {
         NSString *path = [url path];
+        /*
         NSString* filePath;
         NSURL* appURL;
         NSURLRequest* appRequest;
@@ -51,6 +54,12 @@
         // NSLog(@"app URL: %@, isFileURL: %i", [appURL path], [appURL isFileURL]);
         appRequest = [NSURLRequest requestWithURL:appURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20.0];
         [self.webView loadRequest:appRequest];
+        */
+        ZKWebViewController* controller = [navigator openURL:path withController:self];
+        if (controller != nil) {
+            return NO;
+        }
+        // Only for development
         return NO;
     }
 

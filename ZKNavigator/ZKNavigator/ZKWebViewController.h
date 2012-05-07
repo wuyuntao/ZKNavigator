@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZKViewController.h"
 
-@interface ZKWebViewController : NSObject
+@interface ZKWebViewController : NSObject {
+    ZKViewController* viewController;
+    NSString* url;
+}
+
+@property (nonatomic, retain) ZKViewController* viewController;
+@property (nonatomic, retain) NSString* url;
+
+- (void)perform;
 
 @end

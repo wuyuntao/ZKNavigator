@@ -64,12 +64,16 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation SOCPattern
 
+@synthesize object;
+@synthesize selector;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)dealloc {
   [_patternString release]; _patternString = nil;
   [_tokens release]; _tokens = nil;
   [_parameters release]; _parameters = nil;
+  [_object release]; _object = nil;
+  [_selector release]; _selector = nil;
   [super dealloc];
 }
 
@@ -123,7 +127,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
     escapedPatternString = [escapedPatternString stringByReplacingOccurrencesOfString: @"\\\\"
                                                                            withString: kTemporaryBackslashToken];
   }
-  
+
   // Scan through the string, creating tokens that are either strings or parameters.
   // Parameters are prefixed with ":".
   NSScanner* scanner = [NSScanner scannerWithString:escapedPatternString];
@@ -203,7 +207,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
       && [token rangeOfString:kTemporaryBackslashToken].length == 0) {
     // The common case (faster and creates fewer autoreleased strings).
     return token;
-    
+
   } else {
     // Escaped characters may exist.
     // Create a mutable copy so that we don't excessively create new autoreleased strings.
@@ -290,14 +294,14 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
       NSRange parameterRange = NSMakeRange(parameterLocation, validUpUntil - parameterLocation);
       [values addObject:[string substringWithRange:parameterRange]];
     }
-    
+
     ++tokenIndex;
   }
 
   if (nil != pValues) {
     *pValues = [[values copy] autorelease];
   }
-  
+
   return validUpUntil == stringLength && matchingTokens == [_tokens count];
 }
 
@@ -378,7 +382,7 @@ NSString* kTemporaryBackslashToken = @"/backslash/";
   NSArray* values = nil;
   BOOL succeeded = [self gatherParameterValues:&values fromString:sourceString];
   NSAssert(succeeded, @"The pattern can't be used with this string.");
-  
+
   id returnValue = nil;
 
   if (succeeded) {

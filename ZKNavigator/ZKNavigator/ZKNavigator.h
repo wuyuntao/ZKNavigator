@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @class ZKURLMap;
+@class ZKViewController;
 @class ZKWebViewController;
 
 @interface ZKNavigator : NSObject {
@@ -45,6 +46,6 @@
 /**
  * Load and display the page with a pattern that matches the URL
  */
-- (ZKWebViewController*)openURL:(NSString*)URL;
+- (ZKWebViewController*)openURL:(NSString*)URL withController:(ZKViewController*)viewController;
 
 @end
