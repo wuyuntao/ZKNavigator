@@ -10,50 +10,48 @@
 
 @implementation IndexController
 
-- (void)perform
-{
-    NSLog(@"Perform index controller: %@", url);
-    NSString* filePath = [viewController pathForResource:@"index.html"];
-    NSURL* fileURL = [NSURL fileURLWithPath:filePath];
-    NSURLRequest* request = [NSURLRequest requestWithURL:fileURL
-                                             cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                         timeoutInterval:20.0];
-    [[viewController webView] loadRequest:request];
+- (id)init {
+    self = [super init];
+    if (self != nil) {
+        self.template = @"index.html";
+    }
+    return self;
 }
 
 @end
 
 @implementation LoginController
 
-- (void)perform
-{
-    NSLog(@"Perform login controller, %@", url);
-    NSString* filePath = [viewController pathForResource:@"login.html"];
-    NSURL* fileURL = [NSURL fileURLWithPath:filePath];
-    NSURLRequest* request = [NSURLRequest requestWithURL:fileURL
-                                             cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                         timeoutInterval:20.0];
-    [[viewController webView] loadRequest:request];
+- (id)init {
+    self = [super init];
+    if (self != nil) {
+        self.template = @"login.html";
+    }
+    return self;
 }
 
 @end
 
 @implementation UserController
 
-@synthesize userId;
+@synthesize username;
 
-- (id)initWithUserId:(NSString*)uid
+- (id)initWithUsername:(NSString*)theUsername
 {
     self = [self init];
-    if (uid != nil) {
-        self.userId = uid;
+    if (self != nil) {
+        self.template = @"user.html";
+        self.username = theUsername;
     }
     return self;
 }
 
-- (void)perform
+- (NSDictionary*)getContext
 {
-    NSLog(@"perform user controller");
+    NSDictionary* context = [super getContext];
+    NSMutableDictionary* mutableContext = [NSMutableDictionary dictionaryWithDictionary:context];
+    [mutableContext setValue:username forKey:@"username"];
+    return [NSDictionary dictionaryWithDictionary:mutableContext];
 }
 
 @end

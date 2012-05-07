@@ -80,7 +80,7 @@
     SOCPattern *pattern = [SOCPattern patternWithString:URL];
     [self addPattern:pattern forObject:object selector:selector];
     // NOTE Is it ok to release pattern here?
-    [pattern release];
+    // [pattern release];
 }
 
 - (void)setObject:(id)object forURL:(NSString*)URL
@@ -126,15 +126,17 @@
 
 - (id)createObject:(SOCPattern*)pattern fromURL:(NSURL*)URL
 {
-  id value = nil;
-  value = [[pattern object] alloc];
-  if (pattern.selector) {
-      NSLog(@"Not implemented yet");
-  } else {
-      value = [value init];
-  }
-  [value autorelease];
-  return value;
+    id value = nil;
+    value = [[pattern object] alloc];
+    if (pattern.selector != nil) {
+        value = [pattern performSelector:pattern.selector
+                                onObject:pattern.object
+                            sourceString:[URL path]];
+    } else {
+        value = [value init];
+    }
+    [value autorelease];
+    return value;
 }
 
 @end

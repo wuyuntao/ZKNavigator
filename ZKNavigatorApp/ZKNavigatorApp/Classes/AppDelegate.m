@@ -88,7 +88,7 @@
     ZKNavigator *navigator = self.viewController.navigator;
     [navigator from:@"/" toController:[IndexController class]];
     [navigator from:@"/login" toController:[LoginController class]];
-    // [navigator from:@"/users/:id" toController:[UserController class] select:@selector(initWithUserId:)];
+    [navigator from:@"/users/:username" toController:[UserController class] selector:@selector(initWithUsername:)];
 
     self.viewController.invokeString = invokeString;
     self.viewController.view.frame = viewBounds;

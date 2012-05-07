@@ -20,3 +20,13 @@
 - (void)perform;
 
 @end
+
+@interface ZKTemplateViewController : ZKWebViewController {
+    NSString* template;
+}
+
+@property (nonatomic, retain) NSString* template;
+
+- (NSDictionary*)getContext;
+
+@end

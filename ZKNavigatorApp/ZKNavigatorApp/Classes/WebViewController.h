@@ -9,18 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "ZKWebViewController.h"
 
-@interface IndexController : ZKWebViewController
+@interface IndexController : ZKTemplateViewController
 
 @end
 
-@interface LoginController : ZKWebViewController
+@interface LoginController : ZKTemplateViewController
 
 @end
 
-@interface UserController : ZKWebViewController {
-    NSString* userId;
+@interface UserController : ZKTemplateViewController {
+    NSString* username;
 }
 
-@property (nonatomic, retain) NSString* userId;
+@property (nonatomic, retain) NSString* username;
 
 @end
