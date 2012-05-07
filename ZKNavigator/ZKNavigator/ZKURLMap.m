@@ -71,21 +71,16 @@
 {
     SOCPattern *pattern = [SOCPattern patternWithString:URL];
     [self addPattern:pattern forObject:object selector:nil];
-    // NOTE Is it ok to release pattern here?
-    // [pattern release];
 }
 
 - (void)from:(NSString*)URL toObject:(id)object selector:(SEL)selector
 {
     SOCPattern *pattern = [SOCPattern patternWithString:URL];
     [self addPattern:pattern forObject:object selector:selector];
-    // NOTE Is it ok to release pattern here?
-    // [pattern release];
 }
 
 - (void)setObject:(id)object forURL:(NSString*)URL
 {
-    // TODO Normalize the URL first
     [mappings setObject:object forKey:URL];
 }
 
@@ -127,15 +122,13 @@
 - (id)createObject:(SOCPattern*)pattern fromURL:(NSURL*)URL
 {
     id value = nil;
-    value = [[pattern object] alloc];
     if (pattern.selector != nil) {
         value = [pattern performSelector:pattern.selector
                                 onObject:pattern.object
                             sourceString:[URL path]];
     } else {
-        value = [value init];
+        value = [[[[pattern object] alloc] init] autorelease];
     }
-    [value autorelease];
     return value;
 }
 

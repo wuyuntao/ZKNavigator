@@ -79,12 +79,10 @@
     self.viewController = [[[MainViewController alloc] init] autorelease];
     self.viewController.useSplashScreen = YES;
     self.viewController.wwwFolderName = @"www";
-
-    // Comment the following line since we don't use local page anymore
-    // self.viewController.startPage = @"index.html";
     self.viewController.startPage = @"index.html";
 
-    self.viewController.startURL = @"/";
+    // TODO Allow to set start URL
+    // self.viewController.startURL = @"/login";
     ZKNavigator *navigator = self.viewController.navigator;
     [navigator from:@"/" toController:[IndexController class]];
     [navigator from:@"/login" toController:[LoginController class]];
